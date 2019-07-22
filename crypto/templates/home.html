@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    {{ price }}
+
+    <div class="jumbotron">
+        <h1 class="display-4">Crypto News</h1>
+        <p class="lead">This page was created to show you a list of news about Crypto Currency and Blockchain</p>
+    </div>
+    <div class="container">
+        <div class="row">
+            {% for notice in news.Data %}
+                <div class="col-sm">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{{ notice.imageurl }}" class="card-img-top" alt="{{ notice.souce }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ notice.title }}</h5>
+                            <p class="card-text">{{ notice.body }}</p>
+                            <a href="{{ notice.url }}" class="btn btn-secondary" target="_blank">Go to</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Prices
+{% endblock %}
+
+{% block main %}
+    {% if notfound %}
+        <h3>{{ notfound }}</h3>
+    {% else %}
+        {% if price.Response %}
+            <h3>Sorry, but we can't found the crypto that you want, please search for a new crypto on the search form. </h3>
+        {% endif %}
+        {% for key, value in price.DISPLAY.items %}
+            <div class="jumbotron">
+                <h1 class="display-4">{{ key }}</h1>
+                <strong>PRICE</strong>: {{ value.USD.PRICE }}<br>
+                <strong>LASTUPDATE</strong>: {{ value.USD.LASTUPDATE }}<br>
+                <strong>LASTVOLUME</strong>: {{ value.USD.LASTVOLUME }}<br>
+                <strong>LASTVOLUMETO</strong>: {{ value.USD.LASTVOLUMETO }}<br>
+                <strong>LASTTRADEID</strong>: {{ value.USD.LASTTRADEID }}<br>
+                <strong>VOLUMEDAY</strong>: {{ value.USD.VOLUMEDAY }}<br>
+                <strong>VOLUMEDAYTO</strong>: {{ value.USD.VOLUMEDAYTO }}<br>
+                <strong>VOLUME24HOUR</strong>: {{ value.USD.VOLUME24HOUR }}<br>
+                <strong>VOLUME24HOURTO</strong>: {{ value.USD.VOLUME24HOURTO }}<br>
+                <strong>OPENDAY</strong>: {{ value.USD.OPENDAY }}<br>
+                <strong>HIGHDAY</strong>: {{ value.USD.HIGHDAY }}<br>
+                <strong>LOWDAY</strong>: {{ value.USD.LOWDAY }}<br>
+                <strong>OPEN24HOUR</strong>: {{ value.USD.OPEN24HOUR }}<br>
+                <strong>HIGH24HOUR</strong>: {{ value.USD.HIGH24HOUR }}<br>
+                <strong>LOW24HOUR</strong>: {{ value.USD.LOW24HOUR }}<br>
+                <strong>LASTMARKET</strong>: {{ value.USD.LASTMARKET }}<br>
+                <strong>VOLUMEHOUR</strong>: {{ value.USD.VOLUMEHOUR }}<br>
+                <strong>VOLUMEHOURTO</strong>: {{ value.USD.VOLUMEHOURTO }}<br>
+                <strong>OPENHOUR</strong>: {{ value.USD.OPENHOUR }}<br>
+                <strong>HIGHHOUR</strong>: {{ value.USD.HIGHHOUR }}<br>
+                <strong>LOWHOUR</strong>: {{ value.USD.LOWHOUR }}<br>
+                <strong>CHANGE24HOUR</strong>: {{ value.USD.CHANGE24HOUR }}<br>
+                <strong>CHANGEPCT24HOUR</strong>: {{ value.USD.CHANGEPCT24HOUR }}<br>
+                <strong>CHANGEDAY</strong>: {{ value.USD.CHANGEDAY }}<br>
+                <strong>CHANGEPCTDAY</strong>: {{ value.USD.CHANGEPCTDAY }}<br>
+                <strong>SUPPLY</strong>: {{ value.USD.SUPPLY }}<br>
+                <strong>MKTCAP</strong>: {{ value.USD.MKTCAP }}
+            </div>
+        {% endfor %}
+    {% endif %}
+
+{% endblock %}

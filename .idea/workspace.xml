@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a041d60a-0d90-4e1d-b141-ecb296def37c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebCryptoSite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebCryptoSite/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -90,7 +90,7 @@
       <workItem from="1563888786093" duration="302000" />
       <workItem from="1564002502298" duration="7000" />
       <workItem from="1564087686620" duration="3624000" />
-      <workItem from="1564408787996" duration="5866000" />
+      <workItem from="1564408787996" duration="6895000" />
     </task>
     <servers />
   </component>
